@@ -1,0 +1,27 @@
+mat-toolbar {
+    justify-content: space-between
+}
+
+mat-toolbar > div:last-child {
+ flex:.2
+}
+
+div.links > ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding:0;
+    margin:0;
+
+}
+
+div.links li {
+    padding: .5rem
+}
+
+div.links li:hover {
+    background-color: rgba(255,255,255,.2);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}

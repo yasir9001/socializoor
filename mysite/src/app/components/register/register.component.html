@@ -1,0 +1,47 @@
+<div class='wrapper'>
+    <div class='form-wrap'>
+        
+        <div class='text'>
+            <h1>Hello, create an account to continue!</h1>
+        </div>
+
+        <form [formGroup]="registrationForm">
+            <div class='from-controls'>
+                <mat-form-field class="mat-input-field">
+                    <input id="name"
+                            matInput 
+                            formControlName="name"
+                            [(ngModel)]="user.name"
+                            placeholder="Enter your name" />
+                </mat-form-field>
+
+                
+                <mat-form-field>
+                    <input id="email"
+                            matInput
+                            formControlName="email"
+                            [(ngModel)]="user.email"
+                            placeholder="Enter your email" />
+                </mat-form-field>
+
+                
+                <mat-form-field>
+                    <input id="password"
+                            matInput
+                            [type]="hide ? 'password' : 'text'"
+                            formControlName="password"
+                            [(ngModel)]="user.password"
+                            placeholder="Enter your password" />
+                    <mat-icon class="icon" matSuffix (click)="hide = !hide">
+                        {{hide ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+                </mat-form-field>
+
+                <button class="form-buttons" mat-button type='submit'>Register</button>
+            </div>
+            <div class='link'>
+                Already have an account <a routerLink='/login'>Login now</a>
+            </div>
+        </form>
+    </div>
+</div>
