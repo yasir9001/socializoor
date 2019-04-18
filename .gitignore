@@ -1,15 +1,25 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+/backend/.mypy_cache
+/backend/backend/__pycache__
+/backend/userauth/__pycache__
+
+
+/backend/.vscode
+
+
 Pipfile
 .editorconfig
 # compiled output
-/dist
-/tmp
-/out-tsc
+/mysite/dist
+/mysite/tmp
+/mysite/out-tsc
 # Only exists if Bazel was run
 /bazel-out
 # dependencies
-/node_modules
+/mysite/node_modules
+
+/mysite/package-lock.json
 
 # profiling files
 chrome-profiler-events.json

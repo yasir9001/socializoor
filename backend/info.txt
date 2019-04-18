@@ -1,0 +1,11 @@
+conda create --name my_env python=3 // python version used to create enviroment
+source activate my_env              // activate enviroment
+
+
+                    or
+
+
+
+source /home/yasirpc/anaconda3/bin/activate
+conda activate socializor_env
+

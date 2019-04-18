@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from rest_framework import viewsets
 
-def index(request, path=''):
-    """
-    The home page. This renders the container for the single-page app.
-    """
-    return render(request, 'index.html')
+from userauth.models import User
+from userauth.serializers import UserSerializer
+
+class UserViewSets(viewsets.ModelViewSet):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
